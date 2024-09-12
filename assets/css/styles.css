@@ -2,6 +2,11 @@ h1{
     font-family: 'JetBrains Mono';font-size: 25px;
 }
 
+h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+}
+
 p {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -10,13 +15,29 @@ p {
     text-align: center;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 
 body {
     background-color: black;
     overflow: auto;
-    color: white;
+    text-align: center;
 }
 
+#wbtm-banner {
+    background-image: url('/assets/images/wbtm.jpg');
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    min-height: 300px; /* Set a height or use padding to control size */
+    display: flex; /* Optional: to align content */
+    align-items: center; /* Optional: vertical center content */
+    justify-content: center; /* Optional: horizontal center content */
+    color: #fff; /* Optional: text color for better visibility */
+}
 
 .static-background {
     padding: 20px;
@@ -92,7 +113,7 @@ color: white;
 }
 
 .navbar-brand img {
-max-height: 50px; /* Adjust logo size */
+max-height: 40px; /* Adjust logo size */
 }
 
 /* Customizing the hamburger icon to be white */
@@ -111,12 +132,12 @@ margin: 0px
 /* STYLING FOR THE ANIMATED OUTLINE EFFECT ON HOVER */
 
 .holding-hover {
-    padding: 20px;
-    margin-left: 100px;
+    
 }
 .hover-outter {
     position: relative;
-    width: 200px;
+    width: auto;
+    max-width: 200px;
     padding-top: 1px;
     font-family: Arial, sans-serif;
     font-size: 18px;
@@ -125,6 +146,15 @@ margin: 0px
     cursor: pointer;
     overflow: hidden; /* Ensure no overflow of pseudo-elements */
 }
+
+
+.col-centered {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100%; /* Ensure column has height (may need to adjust depending on layout) */
+}
+
 
 /* Create the top border using ::before */
 .hover-outter::before {
