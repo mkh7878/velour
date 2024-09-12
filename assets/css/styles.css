@@ -10,6 +10,7 @@ p {
 body {
     background-color: black;
     overflow: auto;
+    color: white;
 }
 
 
@@ -17,7 +18,7 @@ body {
     padding: 20px;
 
 }
-.img-fluid {
+.img-album-cover {
     padding-top: 20px;
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Ensure images fit within columns */
@@ -27,7 +28,7 @@ body {
 
 
 
-.img-fluid:hover {
+.img-album-cover:hover {
     filter: grayscale(0%);
     opacity: 1;
 }
@@ -76,3 +77,53 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
+      /* Custom Styles */
+      .navbar-custom {
+        background-color: black;
+      }
+  
+      .navbar-nav .nav-link {
+        color: white !important;
+      }
+  
+      .navbar-brand img {
+        max-height: 50px; /* Adjust logo size */
+      }
+  
+      /* Customizing the hamburger icon to be white */
+      .navbar-toggler {
+        border-color: white; /* Optional: make the border white */
+      }
+  
+      /* .navbar-toggler-icon {
+       
+      } */
+
+      #velourgig {
+        background-image: url('/assets/images/gigsinging.jpg');
+        background-size: cover; /* Ensures the background covers the entire div */
+        background-position: center; /* Centers the image in the div */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        margin: 0px
+      }
+
+      .button {
+        background-color: rgba(255, 255, 255, 0.44); /* White background with 44% opacity */
+        color: black; /* Black text color */
+        font-family: 'Sue Ellen Francisco', cursive;
+        font-size: 20px;
+        border: 2px solid black; /* Black border */
+        padding: 5px 25px; /* Padding for the button */
+        text-align: center; /* Center align text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block; /* Fit content width */
+        border-radius: 5px; /* Optional: rounded corners */
+        transition: background-color 0.3s ease; /* Smooth transition on hover */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
+    
+    .button:hover {
+        background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
+        border-color: #69BCC0;
+    }
