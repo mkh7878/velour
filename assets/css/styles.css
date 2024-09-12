@@ -82,52 +82,124 @@ body {
     cursor: pointer;
 }
 
-      /* Custom Styles */
-      .navbar-custom {
-        background-color: black;
-      }
-  
-      .navbar-nav .nav-link {
-        color: white !important;
-      }
-  
-      .navbar-brand img {
-        max-height: 50px; /* Adjust logo size */
-      }
-  
-      /* Customizing the hamburger icon to be white */
-      .navbar-toggler {
-        border-color: white; /* Optional: make the border white */
-      }
-  
-      /* .navbar-toggler-icon {
-       
-      } */
+/* Custom Styles */
+.navbar-custom {
+background-color: #E5A88B;
+}
 
-      #velourgig {
-        background-image: url('/assets/images/gigsinging.jpg');
-        background-size: cover; /* Ensures the background covers the entire div */
-        background-position: center; /* Centers the image in the div */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        margin: 0px
-      }
+.navbar-nav .nav-link {
+color: white;
+}
 
-      .button {
-        background-color: rgba(255, 255, 255, 0.44); /* White background with 44% opacity */
-        color: black; /* Black text color */
-        font-family: 'Sue Ellen Francisco', cursive;
-        font-size: 20px;
-        border: 2px solid black; /* Black border */
-        padding: 5px 25px; /* Padding for the button */
-        text-align: center; /* Center align text */
-        text-decoration: none; /* Remove underline */
-        display: inline-block; /* Fit content width */
-        border-radius: 5px; /* Optional: rounded corners */
-        transition: background-color 0.3s ease; /* Smooth transition on hover */
-        cursor: pointer; /* Pointer cursor on hover */
-    }
-    
-    .button:hover {
-        background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
-        border-color: #69BCC0;
-    }
+.navbar-brand img {
+max-height: 50px; /* Adjust logo size */
+}
+
+/* Customizing the hamburger icon to be white */
+.navbar-toggler {
+border-color: white; /* Optional: make the border white */
+}
+
+#velourgig {
+background-image: url('/assets/images/gigsinging.jpg');
+background-size: cover; /* Ensures the background covers the entire div */
+background-position: center; /* Centers the image in the div */
+background-repeat: no-repeat; /* Prevents the image from repeating */
+margin: 0px
+}
+
+/* STYLING FOR THE ANIMATED OUTLINE EFFECT ON HOVER */
+
+.holding-hover {
+    padding: 20px;
+    margin-left: 100px;
+}
+.hover-outter {
+    position: relative;
+    width: 200px;
+    padding-top: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden; /* Ensure no overflow of pseudo-elements */
+}
+
+/* Create the top border using ::before */
+.hover-outter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Create the bottom border using ::after */
+.hover-outter::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: translateX(-100%); /* Start off-screen to the left */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hover effect: Slide the borders in */
+.hover-outter:hover::before {
+    transform: translateX(0); /* Slide in from right */
+}
+
+.hover-outter:hover::after {
+    transform: translateX(0); /* Slide in from left */
+}
+
+
+.hover-inner {
+    position: relative;
+    padding: 10px;
+    overflow: hidden; 
+}
+
+/* Create the border animation using ::before */
+.hover-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px; /* Set width of the border */
+    height: 100%; /* Cover the full height of the container */
+    background-color: white;
+    transform: translateY(-100%); /* Start off-screen above the container */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hover effect: Slide the border down */
+.hover-inner:hover::before {
+    transform: translateY(0); /* Slide in from top to bottom */
+}
+
+/* Create the border animation using ::before */
+.hover-inner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px; /* Set width of the border */
+    height: 100%; /* Cover the full height of the container */
+    background-color: white;
+    transform: translateY(100%); /* Start off-screen BELOW the container */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hover effect: Slide the border down */
+.hover-inner:hover::after {
+    transform: translateY(0); /* Slide in from top to bottom */
+}
