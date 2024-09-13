@@ -5,12 +5,21 @@ h2 {
     font-size: 20px;
 }
 
+h3 {
+    font-family: "Bungee Outline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    font-size: clamp(35px, 4vw, 75px);
+}
+
 p {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     text-align: center;
+    color: black;
 }
 
 a {
@@ -26,12 +35,25 @@ h1{
     font-variation-settings:
       "wdth" 100;
   }
+
   
 
 body {
     background-color: black;
     overflow: auto;
     text-align: center;
+}
+
+footer {
+    padding-top: 20px;
+    background-color: #34BFBA;
+    padding-bottom: 10px;
+}
+
+.nav-item {
+    border-left: 1px solid white;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #wbtm-banner {
@@ -46,6 +68,28 @@ body {
     color: #fff; /* Optional: text color for better visibility */
 }
 
+#yellowbanner {
+    background-image: url('/assets/images/yellow.jpg');
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    min-height: 240px; /* Set a height or use padding to control size */
+    display: flex; /* Optional: to align content */
+    align-items: center; /* Optional: vertical center content */
+    justify-content: center; /* Optional: horizontal center content */
+    color: #fff; /* Optional: text color for better visibility */
+}
+
+#waebanner {
+    background-image: url('/assets/images/wae.jpg');
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    min-height: 500px; /* Set a height or use padding to control size */
+    display: flex; /* Optional: to align content */
+    color: #fff; /* Optional: text color for better visibility */
+}
+
 .static-background {
     padding: 20px;
 
@@ -54,11 +98,9 @@ body {
     padding-top: 20px;
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Ensure images fit within columns */
-    opacity: 0.5;
+    opacity: 0.75;
     transition: filter 0.5s ease, opacity 0.5s ease;
 }
-
-
 
 .img-album-cover:hover {
     filter: grayscale(0%);
@@ -84,6 +126,7 @@ body {
 
 .modal-content {
     background-color: white;
+    
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -153,7 +196,6 @@ margin: 0px
     cursor: pointer;
     overflow: hidden; /* Ensure no overflow of pseudo-elements */
 }
-
 
 .col-centered {
     display: flex;
@@ -246,10 +288,11 @@ margin: 0px
 .image-container {
     position: relative;
     width: 100%;
+    height: auto;
     padding-top: 60%; 
     background-size: cover;
     background-position: center;
-    background-image: url('/assets/images/shirts/shirts1.jpg'); /* Default background image */
+    background-image: url('/assets/images/shirts/shirt1.png'); /* Default background image */
     transition: background-image 0.5s ease-in-out
   }
 

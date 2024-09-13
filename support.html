@@ -1,0 +1,82 @@
+---
+layout: default
+title: Support
+---
+
+<div class="container-fluid">
+    <div class="row" id="waebanner" style="padding-bottom: 40px; padding-left: 50px;">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+            <h3 style="padding-top: 30px;">Support</h3>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                    <img class="img-fluid" src="/assets/images/tipjar.png" style="min-height: 100px; max-height: 170px;">
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8">
+                    
+                   <div class="row">
+                    <div class="col-md-8 col-lg-8 col-12">
+                        <h2 style="color: black;">Digital Tip Jar</h2>
+                    </div>
+                   </div>
+                    <div class="row" style="padding-top: 20px;">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-6">
+                            <a href="https://paypal.me/velourmusic?country.x=US&locale.x=en_US" target="_blank" class="social-icon" data-hover="/assets/images/social-logos/paypal-hover.png">
+                                <img src="/assets/images/social-logos/paypal.png" alt="paypal link" style="max-height: 50px; width: auto;">
+                            </a>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-6 col-6">
+                            <a href="https://paypal.me/velourmusic?country.x=US&locale.x=en_US" target="_blank"><p style="text-align: left; color: black;">PayPal</p></a>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 15px;">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-6">
+                            <a href="https://venmo.com/u/maehorak" target="_blank" class="social-icon" data-hover="/assets/images/social-logos/venmo-hover.png">
+                                <img src="/assets/images/social-logos/venmo.png" alt="venmo link" style="max-height: 50px; width: auto;">
+                            </a>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-6 col-6">
+                            <a href="https://venmo.com/u/maehorak" target="_blank"><p style="text-align: left; color: black;">Venmo</p></a>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 15px;">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-6">
+                            <a href="https://www.patreon.com/velourmusic" target="_blank" class="social-icon" data-hover="/assets/images/social-logos/patreon-hover.png">
+                                <img src="/assets/images/social-logos/patreon.png" alt="patreon link" style="max-height: 50px; width: auto;">
+                            </a>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-6 col-6">
+                            <a href="https://www.patreon.com/velourmusic" target="_blank"><p style="text-align: left; color: black;">Patreon</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <a href="https://velour.printful.me/" target="_blank"><h2 style="color: black; padding-top: 50px;">Show you support with Merch!</h2></a>
+                    <img src="/assets/images/shirtdrawing.png" class="img-fluid" style="max-height: 200px; width: auto;">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid" style="background-color: #34BFBA; height: 30px;"></div>
+
+<script>
+      document.querySelectorAll('.social-icon').forEach(function(icon) {
+    const img = icon.querySelector('img');
+    const originalSrc = img.src;
+    const hoverSrc = icon.getAttribute('data-hover');
+
+    // Change to hover image on mouseover
+    icon.addEventListener('mouseover', function() {
+        img.src = hoverSrc;
+    });
+
+    // Revert to original image on mouseout
+    icon.addEventListener('mouseout', function() {
+        img.src = originalSrc;
+    });
+});
+</script>
