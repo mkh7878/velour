@@ -1,6 +1,4 @@
-h1{
-    font-family: 'JetBrains Mono';font-size: 25px;
-}
+
 
 h2 {
     font-family: "Raleway", sans-serif;
@@ -20,6 +18,15 @@ a {
     text-decoration: none;
 }
 
+h1{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  
 
 body {
     background-color: black;
@@ -232,4 +239,56 @@ margin: 0px
 /* Hover effect: Slide the border down */
 .hover-inner:hover::after {
     transform: translateY(0); /* Slide in from top to bottom */
+}
+
+
+/* STYLING FOR T SHIRT GRAPHICS */
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 60%; 
+    background-size: cover;
+    background-position: center;
+    background-image: url('/assets/images/shirts/shirts1.jpg'); /* Default background image */
+    transition: background-image 0.5s ease-in-out
+  }
+
+  .section {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 25%; /* Divides the container into 4 vertical columns */
+    cursor: pointer;
+  }
+
+  /* Just to make it easier to see the different sections */
+  .section:nth-child(1) {
+    left: 0;
+  }
+
+  .section:nth-child(2) {
+    left: 25%;
+  }
+
+  .section:nth-child(3) {
+    left: 50%;
+  }
+
+  .section:nth-child(4) {
+    left: 75%;
+  }
+
+/* General style for social icons */
+.social-icon img {
+    width: 50%; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+    transition: 0.3s ease; /* Smooth transition for hover */
+}
+
+#insta-link {
+    background-image: url('/assets/images/social-logos/insta.png');
+}
+
+#insta-link:hover {
+    background-image: url('/assets/images/social-logos/insta-hover.png');
 }

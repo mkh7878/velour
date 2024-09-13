@@ -12,7 +12,7 @@ title: Home
                     <img src="/assets/images/logo.png" class="img-fluid" alt="Velour Logo" style="width: 80%;">
                 </div>
             </div>
-            <div class="row" style="padding-top: 5vw; padding-bottom: 20vw;">
+            <div class="row" style="padding-top: 5vw; padding-bottom: 15vw;">
                 <div class="col-3">
                 </div>
                 <div class="col-6">
@@ -30,7 +30,6 @@ title: Home
                         <div class="holding-hover">
                             <div class="hover-outter">
                                 <div class="hover-inner">
-                                    
                                     <a href="/about.html"><h2>About</h2></a>
                                 </div>
                             </div>
@@ -56,10 +55,91 @@ title: Home
                     </div></div>
                 </div>
             </div>
+            <div class="row" style="padding-bottom: 3vw;">
+                <div class="col-md-3 col-lg-3 col-sm-2 col-1"></div>
+                <div class="col-lg-6 col-md-6 col-sm-8 col-10">
+                    <div class="row">
+                        <div class="col-2">
+                            <a href="https://www.instagram.com/velour_music" target="_blank" class="social-icon" data-hover="/assets/images/social-logos/insta-hover.png">
+                                <img src="/assets/images/social-logos/insta.png" alt="instagram link">
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a href="https://www.facebook.com/velourtheband" target="_blank" class="social-icon" data-hover="/assets/images/social-logos/facebook-hover.png">
+                                <img src="/assets/images/social-logos/facebook.png" alt="facebook link">
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a href="https://open.spotify.com/artist/2OoruTrNfPkJYTLSKgefLQ?si=pxJ2_nW6RjWSnup_SEVqcA" target="_blank" class="social-icon" data-hover="/assets/images/social-logos/spotify-hover.png">
+                                <img src="/assets/images/social-logos/spotify.png" alt="spotify link">
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a href="https://velour-music.bandcamp.com/" target="_blank" class="social-icon" data-hover="/assets/images/social-logos/bc-hover.png">
+                                <img src="/assets/images/social-logos/bc.png" alt="bandcamp link">
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a href="https://www.youtube.com/@velour_music?sub_confirmation=1" target="_blank" class="social-icon" data-hover="/assets/images/social-logos/youtube-hover.png">
+                                <img src="/assets/images/social-logos/youtube.png" alt="youtube link">
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <a href="https://patreon.com/velourmusic" target="_blank" class="social-icon" data-hover="/assets/images/social-logos/patreon-hover.png">
+                                <img src="/assets/images/social-logos/patreon.png" alt="patreon link">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
         </div>
 </div>
-<div class="row">
+<!-- <div class="row" style="background-color: #00BEC9; padding-top: 50px; padding-bottom: 300px;">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+      <div id="imageContainer" class="image-container">
+        <div class="section" data-image="shirts1.jpg"></div>
+        <div class="section" data-image="shirts2.jpg"></div>
+        <div class="section" data-image="shirts3.jpg"></div>
+        <div class="section" data-image="shirts4.jpg"></div>
+      </div>
+      <h1>New Merch Now Available!</h1>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-6" style="padding-top: 30px;">
 
-</div>
+  </div>
+</div> -->
 
-</div>
+<script>
+     const sections = document.querySelectorAll('.section');
+  const imageContainer = document.getElementById('imageContainer');
+
+  // Event listener for hover to change background image
+  sections.forEach(section => {
+    section.addEventListener('mouseenter', function() {
+      const imageName = this.getAttribute('data-image');
+      imageContainer.style.backgroundImage = `url('/assets/images/shirts/${imageName}')`;
+    });
+
+    section.addEventListener('mouseleave', function() {
+      imageContainer.style.backgroundImage = `url('/assets/images/shirts/shirts1.jpg')`; // Default image when no hover
+    });
+  });
+
+
+
+  document.querySelectorAll('.social-icon').forEach(function(icon) {
+    const img = icon.querySelector('img');
+    const originalSrc = img.src;
+    const hoverSrc = icon.getAttribute('data-hover');
+
+    // Change to hover image on mouseover
+    icon.addEventListener('mouseover', function() {
+        img.src = hoverSrc;
+    });
+
+    // Revert to original image on mouseout
+    icon.addEventListener('mouseout', function() {
+        img.src = originalSrc;
+    });
+});
+</script>
