@@ -68,8 +68,8 @@ footer {
     color: #fff; /* Optional: text color for better visibility */
 }
 
-#yellowbanner {
-    background-image: url('/assets/images/yellow.jpg');
+#bcbanner {
+    background-image: url('/assets/images/batcountry/bcbanner.jpg');
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
